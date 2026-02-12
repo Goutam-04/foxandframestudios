@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Mail, Phone, MapPin } from 'lucide-react';

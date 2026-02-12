@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Instagram, Twitter, Linkedin, Github, ArrowUp } from 'lucide-react';
