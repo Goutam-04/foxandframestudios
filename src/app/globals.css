@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+:root {
+  /* Warm Sand */
+  --background: #EEE9E3;
+  /* Deep Graphite */
+  --foreground: #2A2A2A;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-dm-sans);
+  
+  --color-warm-sand: #EEE9E3;
+  --color-deep-graphite: #2A2A2A;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* For now, keeping the same palette or explicitly not supporting dark mode yet as per 'No additional accent colors' rule, 
+     but usually we might want a dark mode. 
+     Given the SRS says "High contrast", we interpret this as fixed colors for now to ensure the specific visual application.
+     If dark mode is needed, we would invert, but let's stick to the brand document which implies a specific look.
+     Actually, let's keep the dark mode media query but map it to the same or appropriate dark equivalents if needed.
+     The SRS "Deep Graphite color on Warm Sand" strongly suggests a light-mode-first or fixed theme.
+     I will comment out dark mode overrides to enforce the brand identity for now. */
+  /* :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  } */
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-dm-sans), Arial, Helvetica, sans-serif;
+}
