@@ -11,6 +11,9 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "Fox & Frame",
   description: "Strategy-First Digital Foundations",
+  icons: {
+    icon: '/favicon.png',
+  },
 };
 
 export default function RootLayout({

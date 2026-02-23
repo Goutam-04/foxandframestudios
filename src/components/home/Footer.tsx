@@ -37,7 +37,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-[#EEE9E3] rounded-full flex items-center justify-center">
-                <img src="/logo.png" alt="Fox & Frame" className="h-6 w-auto opacity-80" />
+                <img src="/favicon.png" alt="Fox & Frame" className="h-7 w-auto opacity-80" />
               </div>
               <span className="font-bold text-xl">Fox & Frame</span>
             </div>
