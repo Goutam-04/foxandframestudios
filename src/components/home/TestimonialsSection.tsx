@@ -5,24 +5,25 @@ import { Star } from 'lucide-react';
 
 const testimonials = [
   {
-    name: 'Radhika Iyer',
-    text: 'Their design thinking is top-notch. Every element on our site now feels intentional and elegant. Clients always compliment the UI!',
-    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80',
+    name: 'Ananya Mohanty',
+    location: 'Bhubaneswar, Odisha',
+    text: 'Fox & Frame completely transformed our boutique\'s digital presence. We were struggling to get online sales, but their strategy-first approach made all the difference. The website is not just beautiful, it actually converts!',
+    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80',
+    initials: null,
   },
   {
-    name: 'Priya Mehta',
-    text: 'Fox & Frame understood our brand in ways we hadn\'t even imagined. The UI is sleek, fast, and makes our app stand out in a crowded market.',
-    avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80',
+    name: 'Bikash Rout',
+    location: 'Cuttack, Odisha',
+    text: 'I\'ve worked with many agencies before, but these guys are on another level. They didn\'t just give us a generic template; they built a solid foundation for our tech startup. Highly recommended for any growing business.',
+    avatar: null,
+    initials: 'BR',
   },
   {
-    name: 'Arjun Sinha',
-    text: 'From wireframes to final build, the Fox & Frame team was insanely detail-oriented. Our bounce rate dropped by 42% after the redesign!',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80',
-  },
-  {
-    name: 'Ayesha Khan',
-    text: 'They gave us more than a website — they gave us a brand identity. The aesthetics, responsiveness, and speed are on point!',
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&q=80',
+    name: 'Rohan Desai',
+    location: 'Mumbai, Maharashtra',
+    text: 'Bhai, what a brilliant job! The aesthetics, the speed, the whole vibe is just perfect. Ekdam premium feel hai website ka. They understood our brand vision perfectly and delivered beyond expectations. Maza aa gaya kaam karke!',
+    avatar: null,
+    initials: 'RD',
   },
 ];
 
@@ -63,7 +64,7 @@ export default function TestimonialsSection() {
         {extendedTestimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-[400px] bg-[#FAFAFA] border border-[#2A2A2A]/5 rounded-3xl p-8"
+            className="flex-shrink-0 w-[400px] flex flex-col bg-[#FAFAFA] border border-[#2A2A2A]/5 rounded-3xl p-8"
           >
             {/* Rating */}
             <div className="flex items-center gap-2 mb-6">
@@ -82,13 +83,22 @@ export default function TestimonialsSection() {
             </p>
 
             {/* Author */}
-            <div className="flex items-center gap-4">
-              <img
-                src={testimonial.avatar}
-                alt={testimonial.name}
-                className="w-12 h-12 rounded-full object-cover grayscale opacity-80"
-              />
-              <span className="font-semibold text-[#2A2A2A]">{testimonial.name}</span>
+            <div className="flex items-center gap-4 mt-auto">
+              {testimonial.avatar ? (
+                <img
+                  src={testimonial.avatar}
+                  alt={testimonial.name}
+                  className="w-12 h-12 rounded-full object-cover grayscale opacity-80"
+                />
+              ) : (
+                <div className="w-12 h-12 rounded-full bg-[#2A2A2A]/10 flex items-center justify-center text-[#2A2A2A] font-semibold text-lg">
+                  {testimonial.initials}
+                </div>
+              )}
+              <div className="flex flex-col justify-center">
+                <span className="font-semibold text-[#2A2A2A] leading-tight">{testimonial.name}</span>
+                <span className="text-xs text-[#2A2A2A]/60 mt-0.5">{testimonial.location}</span>
+              </div>
             </div>
           </div>
         ))}
